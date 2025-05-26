@@ -45,10 +45,6 @@ and live-streamed.
 ![Hossein Bijanrostami<br>TA](./images/Hossein_photo.jpg)
 :::
 
-::: instructorphoto
-![Mai Ali<br>TA](./images/Mai_Ali_photo.jpg)
-:::
-
 
 :::
 :::
@@ -56,6 +52,10 @@ and live-streamed.
 
 ::: {#people .container .sec}
 ::: {#shuffle-container .col}
+
+::: instructorphoto
+![Mai Ali<br>TA](./images/Mai_Ali_photo.jpg)
+:::
 
 ::: instructorphoto
 ![Sahil Gupta<br>TA](./images/empty.png)
