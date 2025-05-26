@@ -2,8 +2,8 @@ source("./_aux/aux_func.R")
 
 ws06_l <- "./worksheet/CSC358_Winter25-TUT_ws6.pdf"
 ws06_sol_l <- "./worksheet/CSC358_Winter25-TUT_ws6-sol.pdf"
-ws07_l <- "./worksheet/CSC358_Winter25-TUT_ws7_sampleMid.pdf"
-ws07_sol_l <- "./worksheet/CSC358_Winter25-TUT_ws7_sampleMid-sol.pdf"
+ws07_l <- "./worksheet/CSC358_Winter25-TUT_ws7.pdf"
+ws07_sol_l <- "./worksheet/CSC358_Winter25-TUT_ws7-sol.pdf"
 
 W07_top <- " "
 W07_rea <- " "
