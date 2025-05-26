@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>CSC38-Winter 2025</title>
+
+<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">CSC358</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html#schedule">Schedule</a>
+</li>
+<li>
+  <a href="index.html#coursework">Coursework</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Syllabus
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="syllabus.html">Overview</a>
+    </li>
+    <li>
+      <a href="syllabus.html#syltextbook">Textbooks</a>
+    </li>
+    <li>
+      <a href="syllabus.html#syltentsch">Tentative Schedule</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylassessment">Assessment and Deadlines</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylintegrity">Academic Integrity</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylplagiarism">Plagiarism Detection</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylconsent">Informed Consent – Email Lists</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylmissterm">Missed Term Work</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylmissfin">Missed Final Exam</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylremark">Remark Requests</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylaccommodations">Accommodations</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylspecconsider">Special Consideration</a>
+    </li>
+    <li>
+      <a href="syllabus.html#syllateness">Last Date to Drop Course</a>
+    </li>
+    <li>
+      <a href="syllabus.html#syledi">Equity, Diversity and Inclusion</a>
+    </li>
+    <li>
+      <a href="syllabus.html#syltut">Tutorials</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylannounce">Course Announcements</a>
+    </li>
+    <li>
+      <a href="syllabus.html#syldisc">Discussion Board</a>
+    </li>
+    <li>
+      <a href="syllabus.html#sylcommunication">Communications</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="https://markus0.teach.cs.toronto.edu/utm-2025-01/?locale=en">MarkUs</a>
+</li>
+<li>
+  <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwjY5PH1qo-MAxXKg4kEHfO2HTkQjBB6BAgPEAE&amp;url=https%3A%2F%2Fapp.crowdmark.com%2Fsign-in&amp;usg=AOvVaw1BliOUNBlYLMDitDswcatf&amp;opi=89978449">Crowdmark</a>
+</li>
+<li>
+  <a href="https://q.utoronto.ca/courses/373623">Quercus</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">CSC38-Winter 2025</h1>
+
+</div>
+
+
+<div
+id="csc358-principles-of-computer-networks---winter-2025-mathematical-computational-sciences-university-of-toronto-mississauga"
+class="section level1">
+<h1><strong>CSC358: Principles of Computer Networks - Winter
+2025</strong><br>Mathematical &amp; Computational Sciences, University
+of Toronto Mississauga</h1>
+<p>This course is designed as an <em>in-person</em> course aimed at
+introducing basic computer networks design concepts and protocols. For
+your convenience, all lectures and instructor’s Office Hours will be
+also live-streamed over <a
+href="https://utoronto.zoom.us/j/85487534694">Zoom</a>. Furthermore, all
+lectures will be recorded and posted on the course website. Note that
+tutorials won’t be recorded and live-streamed.</p>
+<div id="course-staff" class="section level2">
+<h2>Course Staff</h2>
+<div id="people" class="container sec">
+<div id="shuffle-container" class="col">
+<div class="instructorphoto">
+<div class="float">
+<img src="images/erfan_img3.png" alt="Erfan Meskar Instructor" />
+<div class="figcaption">Erfan Meskar<br>Instructor</div>
+</div>
+</div>
+<div class="instructorphoto">
+<div class="float">
+<img src="images/empty.png" alt="Ali Parchekani TA" />
+<div class="figcaption">Ali Parchekani<br>TA</div>
+</div>
+</div>
+<div class="instructorphoto">
+<div class="float">
+<img src="images/empty.png" alt="Hossein Bijanrostami TA" />
+<div class="figcaption">Hossein Bijanrostami<br>TA</div>
+</div>
+</div>
+<div class="instructorphoto">
+<div class="float">
+<img src="images/Mai_Ali_photo.jpg" alt="Mai Ali TA" />
+<div class="figcaption">Mai Ali<br>TA</div>
+</div>
+</div>
+<div class="instructorphoto">
+<div class="float">
+<img src="images/empty.png" alt="Sahil Gupta TA" />
+<div class="figcaption">Sahil Gupta<br>TA</div>
+</div>
+</div>
+<div class="instructorphoto">
+<div class="float">
+<img src="images/empty.png" alt="Muhammad Hamza TA" />
+<div class="figcaption">Muhammad Hamza<br>TA</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sechighlight">
+<div id="logistics" class="section level2 container sec">
+<h2>Logistics</h2>
+<ul>
+<li><strong>Instructor:</strong> Erfan Meskar <img
+src="images/erfan_email.jpg" alt="Muhammad Hamza TA" /></li>
+<li><strong>Lectures:</strong> you can attend the lectures both
+in-person and over <a
+href="https://utoronto.zoom.us/j/85487534694">Zoom</a>.
+<ul>
+<li><strong>LEC0101:</strong> Thursday, 01:00 PM - 03:00 PM, MN
+2110.</li>
+<li><strong>LEC0102:</strong> Thursday, 05:00 PM - 07:00 PM, MN
+1210.</li>
+</ul></li>
+<li><strong>Tutorials:</strong>
+<ul>
+<li><strong>PRA101:</strong> Tuesday, 9 AM – 10 AM, Room DH2020
+(<em>in-person only</em>)</li>
+<li><strong>PRA102:</strong> Tuesday, 10 AM – 11 AM, Room DH2020
+(<em>in-person only</em>)</li>
+<li><strong>PRA103:</strong> Tuesday, 10 AM – 11 AM, Room DH2020
+(<em>in-person only</em>)</li>
+<li><strong>PRA106:</strong> Tuesday, 4 PM – 5 PM, Room DH2020
+(<em>in-person only</em>)</li>
+</ul></li>
+<li><strong>Office hours:</strong>
+<ul>
+<li>Erfan Meskar (DH 3019 and <a
+href="https://utoronto.zoom.us/j/85487534694">Zoom</a>): Thursday 11:30
+AM - 12:30 PM and 03:30 PM - 04:30 PM</li>
+<li>Ali Parchekani (MN 2190): Tuesday 2:00-3:00 PM</li>
+<li>Sahil Gupta (<a
+href="https://utoronto.zoom.us/j/84009679925">Zoom</a>): Wednesday 6:00
+- 7:00 PM, Thursday 5:00 - 6:00 PM, Friday 5:00 - 6:00 PM</li>
+</ul></li>
+<li><strong>Contact</strong>:
+<ul>
+<li>Students should ask <em>all</em> course-related questions in course
+Piazza channels. <br></li>
+<li>For personal matters only, email instructor.</li>
+</ul></li>
+<li><strong>Announcements:</strong> All announcements will be made in
+Piazza.</li>
+</ul>
+</div>
+</div>
+<div id="coursework" class="section level2 container sec">
+<h2>Coursework</h2>
+<ul>
+<li><strong>Programming Assignments (32%)</strong>
+<ul>
+<li>You will complete four programming assignments over the term.</li>
+<li>The first one (<em>i.e.</em>, PA0) is worth 2%, and the other three
+are worth 10% each.</li>
+<li>These must be done individually.</li>
+<li>The programming assignments must be submitted on <a
+href="https://markus0.teach.cs.toronto.edu/utm-2025-01/?locale=en">MarkUs</a>,
+and the submission deadline will be at 11:59 PM.</li>
+</ul></li>
+<li><strong>Problem Sets (20%)</strong>
+<ul>
+<li>You will complete two problem sets, each worth 10%.</li>
+<li>These must be done individually.</li>
+<li>Problem sets must be submitted on <a
+href="https://crowdmark.com">Crowdmark</a>, and the submission deadline
+will be at 11:59 PM.</li>
+</ul></li>
+<li><strong>Wireshark Labs (3%)</strong>
+<ul>
+<li>You will complete three Wireshark labs worth 1% each over the
+term.</li>
+<li>These must be done individually.</li>
+<li>Wireshark labs must be submitted on <a
+href="https://q.utoronto.ca/courses/373623/quizzes">Quercus</a>, and the
+submission deadline will be at 11:59 PM.</li>
+</ul></li>
+<li><strong>Midterm (15%)</strong>
+<ul>
+<li>The midterm is scheduled for Feb. 28, 6:25 - 8:00 PM, at KN 137,
+which will test the content of the weeks before the test.</li>
+<li>The length of the midterm test will be 95 minutes and closed
+book.</li>
+<li>Non-programmable calculators are allowed. Aid sheet is not
+allowed.</li>
+</ul></li>
+<li><strong>Final Exam (30%)</strong>
+<ul>
+<li>The final exam is closed book, comprehensive, 2 hours, and held
+during the exam period.</li>
+<li>Non-programmable calculators are allowed.</li>
+<li>Aid sheet is not allowed.</li>
+<li>You must obtain at least 40% on the final exam to pass the course;
+otherwise, your final course grade will be set no higher than 47%.</li>
+</ul></li>
+</ul>
+<p>All (currently tentative) deadlines are listed in the <a
+href="#schedule">schedule</a>. Note that <strong>due dates may
+change</strong> based on how the course is progressing.</p>
+</div>
+<div id="submitting" class="container sec">
+<div id="submitting-coursework" class="section level2">
+<h2>Submitting Coursework</h2>
+<ul>
+<li>Do not submit your coursework via email.</li>
+<li>If anything goes wrong, please ask a question in Piazza or contact a
+course assistant.</li>
+<li>You can submit as many times as you’d like until the deadline: we
+will only grade the last submission.</li>
+<li>Partial work is better than not submitting any work.</li>
+</ul>
+</div>
+</div>
+<div id="latedays" class="container sec">
+<div id="late-days" class="section level2">
+<h2>Late Days</h2>
+<ul>
+<li>You have 6 grace tokens to use throughout the semester. The 6 grace
+days can be distributed across all assignments.</li>
+<li>A grace token extends the deadline by 24 hours.</li>
+<li>You can use up to 3 late days per assignment.</li>
+<li>Assignments submitted after the grace period will receive a grade of
+zero.</li>
+</ul>
+</div>
+</div>
+<div id="sylremark" class="container sec">
+<div id="regrade-requests" class="section level2">
+<h2>Regrade Requests</h2>
+<p>Regrade requests for Programming Assignments, Problem Sets, Wireshark
+Labs, and Midterm are due within 1 week of receiving the graded work and
+must be submitted by posting a private note on Piazza.</p>
+<ul>
+<li>We ask that you carefully review your assignments, reflect, and
+write a short explanation justifying the reasons for a regrading
+request.</li>
+<li>If a grade is contested and we realize that the marker made a
+mistake in the student’s favour, the mark for that assignment may be
+lowered when the mistake is found. This would otherwise create a
+situation which is unfair to other students.</li>
+<li>Please include your full name and UTORid in the body of the private
+note.</li>
+</ul>
+</div>
+</div>
+<div id="schedule" class="container sec">
+<div id="course-schedule" class="section level2">
+<h2>Course Schedule</h2>
+<table>
+<colgroup>
+<col width="5%" />
+<col width="20%" />
+<col width="14%" />
+<col width="17%" />
+<col width="13%" />
+<col width="28%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Week</th>
+<th align="left">Topics</th>
+<th align="left">Readings</th>
+<th align="left">Slides and<br>Recordings</th>
+<th align="left">Worksheets</th>
+<th align="left">Coursework</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">- Course Logistics<br>- Introduction</td>
+<td align="left">P&amp;D: 1.1 - 1.3</td>
+<td align="left">Part 1: <a href="./lec/Week01-part1.pptx">slides</a>,
+<a
+href="https://play.library.utoronto.ca/watch/c91e183238428e11249f4f3811091d95">recording</a><br>Part
+2: <a href="./lec/Week01-part2.pptx">slides</a>, <a
+href="https://play.library.utoronto.ca/watch/4755a047f2f1118d758d2dfcaf863d87">recording</a></td>
+<td align="left">No worksheet</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">- Circuit Switching<br>- Packet Switching,<br>-
+Statistical Multiplexing<br>- Intro to Physical and Link Layer</td>
+<td align="left">P&amp;D: 2.1, 2.2</td>
+<td align="left">Part 1: <a href="./lec/Week02-part1.pptx">slides</a>,
+<a
+href="https://play.library.utoronto.ca/watch/fe48bc7fdd78791f650d25bc4c98191e">recording</a><br>Part
+2: <a href="./lec/Week02-part2.pptx">slides</a>, <a
+href="https://play.library.utoronto.ca/watch/b9d91e683a4615b9faed789b1049cc8b">recording</a><br>Part
+3: <a href="./lec/Week02-part3.pptx">slides</a>, <a
+href="https://play.library.utoronto.ca/watch/e5177ba4879b5321631aa67712649cd8">recording</a><br>Part
+4: <a href="./lec/Week02-part4.pptx">slides</a>, <a
+href="https://play.library.utoronto.ca/watch/0d078c3a8e4337c99a9da2acfcd9f1ce">recording</a></td>
+<td align="left"><a
+href="./worksheet/CSC358_Winter25-TUT_ws1.pdf">Worksheet 1</a><br> - <a
+href="./worksheet/CSC358_Winter25-TUT_ws1-sol.pdf">solution</a></td>
+<td align="left">📢 <a href="./assignments/pa0_handout.pdf">PA0</a>
+<span style="color: green;"><strong>out</strong></span><br> 📆 Due on
+Sunday, Jan. 26, 11:59 PM</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left">- Abstract Model of Link<br> - Error Detection and
+Correction</td>
+<td align="left">P&amp;D: 1.5, 2.4</td>
+<td align="left">Part 1: <a href="./lec/Week03-part1.pptx">slides</a>,
+<a
+href="https://play.library.utoronto.ca/watch/07269bf4a833f08536356623dca73437">recording</a><br>Part
+2: <a href="./lec/Week03-part2.pptx">slides</a>, <a
+href="https://play.library.utoronto.ca/watch/3a5eb88197831c87bd01351003521de9">recording</a></td>
+<td align="left"><a
+href="./worksheet/CSC358_Winter25-TUT_ws2.pdf">Worksheet 2</a><br> - <a
+href="./worksheet/CSC358_Winter25-TUT_ws2-sol.pdf">solution</a></td>
+<td align="left">⏰ PA0 <span
+style="color: red;"><strong>due</strong></span><br>📢 <a
+href="./assignments/wl0_handout.pdf">WL0</a> <span
+style="color: green;"><strong>out</strong></span><br> No Submission is
+needed.<br>▶️ <a
+href="https://utoronto-my.sharepoint.com/:v:/g/personal/muhammad_hamza_mail_utoronto_ca/EUCPvHtd84tChPjaez7w_u0BODxVhn57PwZqHvAGLIQojw?e=yReGlh&amp;nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D">Intro
+to Wireshark</a> <span
+style="color: green;"><strong>out</strong></span><br> - In this video,
+your TA, Muhammad, gives a short introduction to Wireshark</td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="left">- Error Detection and Correction, cont’d<br> - Shared
+Broadcast Networks</td>
+<td align="left">P&amp;D: 2.4, 2.6, 2.7</td>
+<td align="left">Part 1: <a href="./lec/Week04-part1.pptx">slides</a>,
+<a
+href="https://play.library.utoronto.ca/watch/e0b4f494fbf909754218e39f395d9a7b">recording</a><br>Part
+2: <a href="./lec/Week04-part2.pptx">slides</a>, <a
+href="https://play.library.utoronto.ca/watch/59694c6a826a3698d54cca20aec25feb">recording</a></td>
+<td align="left"><a
+href="./worksheet/CSC358_Winter25-TUT_ws3.pdf">Worksheet 3</a><br> - <a
+href="./worksheet/CSC358_Winter25-TUT_ws3-sol.pdf">solution</a></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">5</td>
+<td align="left">- Switched Ethernet,<br> - Learning Switches<br>-
+Spanning Tree Protocol</td>
+<td align="left">P&amp;D: 3.2.1 - 3.2.3</td>
+<td align="left">Part 1: <a href="./lec/Week05-part1.pptx">slides</a>,
+<a
+href="https://play.library.utoronto.ca/watch/a09680c664641d0e5103a5deff2818cf">recording</a><br>Part
+2: <a href="./lec/Week05-part2.pptx">slides</a>, <a
+href="https://play.library.utoronto.ca/watch/1207a0786b005f960a7aa206a0582abb">recording</a><br>Part
+3: <a href="./lec/Week05-part3.pptx">slides</a>, <a
+href="https://play.library.utoronto.ca/watch/1481093c73f531a9d838bb3c27a9c775">recording</a></td>
+<td align="left"><a
+href="./worksheet/CSC358_Winter25-TUT_ws4.pdf">Worksheet 4</a><br> - <a
+href="./worksheet/CSC358_Winter25-TUT_ws4-sol.pdf">solution</a></td>
+<td align="left">📢 <a href="./assignments/ps1_handout.pdf">PS1</a>
+<span style="color: green;"><strong>out</strong></span><br> 📆 Due on
+Sunday, Feb. 16, 11:59 PM<br> <a
+href="./assignments/ps1_sol_template.zip">PS1 Solution Template for
+Latex</a></td>
+</tr>
+<tr class="even">
+<td align="left">6</td>
+<td align="left">- Internet Protocol (IP)<br> - IP addressing<br> -
+Datagram Forwarding in IP<br> - ICMP<br> - DHCP<br> - ARP<br> - DNS</td>
+<td align="left">P&amp;D: 3.3.1-3.3.8, 9.3.1</td>
+<td align="left">Part 1: <a href="./lec/Week06-part1.pptx">slides</a>,
+<a
+href="https://play.library.utoronto.ca/watch/e24273a6c0b8f1e3338beab3f78987dc">recording</a><br>Part
+2: <a href="./lec/Week06-part2.pptx">slides</a>, <a
+href="https://play.library.utoronto.ca/watch/12125ded57316b31fd21206981994a67">recording</a><br>Part
+3: <a href="./lec/Week06-part3.pptx">slides</a>, <a
+href="https://play.library.utoronto.ca/watch/8a433b64edb9fe70e6593ee41b13d8b3">recording</a><br>Part
+4: <a href="./lec/Week06-part4.pptx">slides</a>, <a
+href="https://play.library.utoronto.ca/watch/2f14ee44d682434ddce85e2c34bf1b25">recording</a><br>Part
+5: <a href="./lec/Week06-part5.pptx">slides</a>, <a
+href="https://play.library.utoronto.ca/watch/f4bac1de93afcd2adf2c2eb5244fa72a">recording</a><br>Part
+6: <a href="./lec/Week06-part6.pptx">slides</a>, <a
+href="https://play.library.utoronto.ca/watch/22d8a081a2c4a0b89ef8b444be1d7b1e">recording</a><br>Part
+7: <a href="./lec/Week06-part7.pptx">slides</a>, <a
+href="https://play.library.utoronto.ca/watch/ce51bdec62156c15999bc1b73eabaa4e">recording</a></td>
+<td align="left"><a
+href="./worksheet/CSC358_Winter25-TUT_ws5.pdf">Worksheet 5</a><br> - <a
+href="./worksheet/CSC358_Winter25-TUT_ws5-sol.pdf">solution</a></td>
+<td align="left">⏰ PS1 <span
+style="color: red;"><strong>due</strong></span><br>📢 <a
+href="./assignments/wl1_handout.pdf">WL1</a> <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on Sunday,
+Feb 23, 11:59 PM<br>📢 <a href="./assignments/pa1_handout.pdf">PA1</a>
+<span style="color: green;"><strong>out</strong></span><br> 📆 Due on
+Sunday, Feb 23, 11:59 PM<br>▶️ <a
+href="https://utoronto-my.sharepoint.com/:v:/g/personal/sahilg_gupta_utoronto_ca/ERhlzyhfKsVLuIrpfK3Iy14B57cQKUWGllyamRF8ZGw7Fg?e=yqJPcD&amp;nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D">Intro
+to PA1</a> <span style="color: green;"><strong>out</strong></span><br> -
+In this video, your TA, Sahil, gives a short introduction to PA1.</td>
+</tr>
+<tr class="odd">
+<td align="left">Reading Week</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">7</td>
+<td align="left"><span style="background-color: yellow;"><strong>Midterm
+Week</strong></span></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"><a
+href="./worksheet/CSC358_Winter25-TUT_ws6.pdf">Worksheet 6</a><br> - <a
+href="./worksheet/CSC358_Winter25-TUT_ws6-sol.pdf">solution</a><br><a
+href="./worksheet/CSC358_Winter25-TUT_ws7_sampleMid.pdf">Worksheet
+7</a><br>(<em>sample midterm</em>)<br> - <a
+href="./worksheet/CSC358_Winter25-TUT_ws7_sampleMid-sol.pdf">solution</a></td>
+<td align="left">⏰ PA1 <span
+style="color: red;"><strong>due</strong></span><br>⏰ WL1 <span
+style="color: red;"><strong>due</strong></span><br>📬 <span
+style="color: orange;"><strong>PS1 solution</strong></span>
+posted<br> 🔎 Available on Piazza<br>📬 <span
+style="color: orange;"><strong>Midterm cover page and aid
+sheets</strong></span> posted<br> 🔎 Available on Piazza</td>
+</tr>
+<tr class="odd">
+<td align="left">8</td>
+<td align="left">- Intra-domain Routing</td>
+<td align="left">P&amp;D: 3.4</td>
+<td align="left">Part 1: <a href="./lec/Week08-part1.pptx">slides</a>,
+<a
+href="https://play.library.utoronto.ca/watch/062d617f2e8d17e5b7eb08a86a1e7c0b">recording</a><br>Part
+2: <a href="./lec/Week08-part2.pptx">slides</a>, <a
+href="https://play.library.utoront.ca/watch/f90b50f92f8993d9d224e5ccf1a684d4">recording</a><br>Part
+3: <a href="./lec/Week08-part3.pptx">slides</a>, <a
+href="https://play.library.utoronto.ca/watch/9779b3c9d19ea04a7097ea7e8abb965b">recording</a></td>
+<td align="left">No worksheet</td>
+<td align="left">📢 <a href="./assignments/pa2_handout.pdf">PA2</a>
+<span style="color: green;"><strong>out</strong></span><br> 📆 Due on
+Sunday, March 16, 11:59 PM<br>📢 <a
+href="./assignments/wl2_handout.pdf">WL2</a> <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on Sunday,
+March 16, 11:59 PM</td>
+</tr>
+<tr class="even">
+<td align="left">9</td>
+<td align="left">- Inter-domain Routing</td>
+<td align="left">P&amp;D: 4.1</td>
+<td align="left">Part 1: <a href="./lec/Week09-part1.pptx">slides</a>,
+<a
+href="https://play.library.utoronto.ca/watch/66d9c1be69e79f4c8b98ed51d66fffae">recording</a><br>Part
+2: <a href="./lec/Week09-part2.pptx">slides</a>, <a
+href="https://play.library.utoronto.ca/watch/36b8357cde1f935d77e3a9343a7c1803">recording</a><br>Part
+3: <a href="./lec/Week09-part3.pptx">slides</a>, <a
+href="https://play.library.utoronto.ca/watch/434bb723fd15de9ae56829275b4db3e1">recording</a><br>Part
+4: <a href="./lec/Week09-part4.pptx">slides</a>, <a
+href="https://play.library.utoronto.ca/watch/1dc5ee313bb7079cd921e7edd8259830">recording</a></td>
+<td align="left"><a
+href="./worksheet/CSC358_Winter25-TUT_ws8.pdf">Worksheet 8</a><br> - <a
+href="./worksheet/CSC358_Winter25-TUT_ws8-sol.pdf">solution</a></td>
+<td align="left">⏰ PA2 <span
+style="color: red;"><strong>due</strong></span><br>⏰ WL2 <span
+style="color: red;"><strong>due</strong></span><br>📢 <a
+href="./assignments/ps2_handout.pdf">PS2</a> <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on Sunnday,
+March 30, 11:59 PM<br> <a href="./assignments/ps2_sol_template.zip">PS2
+Solution Template for Latex</a><br>📬 <span
+style="color: orange;"><strong>Midterm solution</strong></span>
+posted<br> 🔎 Available on Piazza</td>
+</tr>
+<tr class="odd">
+<td align="left">10</td>
+<td align="left">- Putting Things Together<br> - HTTP<br> - Why We Need
+Transport Layer<br> - UDP<br> - Introduction to TCP</td>
+<td align="left">P&amp;D: 9.1.2, 5.1</td>
+<td align="left">Part 1: <a href="./lec/Week10-part1.pptx">slides</a>,
+<a
+href="https://play.library.utoronto.ca/watch/9ae5f2d1aeec045d6a2c364b37b3f7d9">recording</a><br>Part
+2: <a href="./lec/Week10-part2.pptx">slides</a>, <a
+href="https://play.library.utoronto.ca/watch/a44ec638e78d62439eaf4452d846a34b">recording</a><br>Part
+3: <a href="./lec/Week10-part3.pptx">slides</a>, <a
+href="https://play.library.utoronto.ca/watch/958aa224415a0ad37ee60eda94ec4be4">recording-3.a</a>,
+<a
+href="https://play.library.utoronto.ca/watch/193f0062dde1dc900ea04d8e23f20b45">recording-3.b</a><br>Part
+4: <a href="./lec/Week10-part4.pptx">slides</a>, <a
+href="https://play.library.utoronto.ca/watch/7e23f3bea0b45dda73d9341e3a791580">recording</a><br>Part
+5: <a href="./lec/Week10-part5.pptx">slides</a>, <a
+href="https://play.library.utoronto.ca/watch/8e26878eace25acd45011cf06f098008">recording</a></td>
+<td align="left"><a
+href="./worksheet/CSC358_Winter25-TUT_ws9.pdf">Worksheet 9</a><br> - <a
+href="./worksheet/CSC358_Winter25-TUT_ws9-sol.pdf">solution</a></td>
+<td align="left">📢 <a href="./assignments/pa3_handout.pdf">PA3</a>
+<span style="color: green;"><strong>out</strong></span><br> 📆 Due on
+Friday, April 4, 11:59 PM<br>📢 <a
+href="./assignments/wl3_handout.pdf">WL3</a> <span
+style="color: green;"><strong>out</strong></span><br> 📆 Due on Friday,
+April 4, 11:59 PM</td>
+</tr>
+<tr class="even">
+<td align="left">11</td>
+<td align="left">- Reliable Transfer<br> - Intro to Congestion
+Control</td>
+<td align="left">P&amp;D: 5.2, 6.3</td>
+<td align="left">Part 1: <a href="./lec/Week11-part1.pptx">slides</a>,
+<a
+href="https://play.library.utoronto.ca/watch/628b30b353f0bf88be98214fb2a14c35">recording</a><br>Part
+2: <a href="./lec/Week11-part2.pptx">slides</a>, <a
+href="https://play.library.utoronto.ca/watch/f6cbd8ae3df388ab6ac080ba5ea7931b">recording</a><br>Part
+3: <a href="./lec/Week11-part3.pptx">slides</a>, <a
+href="https://play.library.utoronto.ca/watch/66101bd74fcd5fec07ab0e59cc01ea50">recording</a><br>Part
+4: <a href="./lec/Week11-part4.pptx">slides</a>, <a
+href="https://play.library.utoronto.ca/watch/e2e260f6cdffdd04558d405d74e55b7d">recording</a></td>
+<td align="left"><a
+href="./worksheet/CSC358_Winter25-TUT_ws10.pdf">Worksheet 10</a><br> -
+<a href="./worksheet/CSC358_Winter25-TUT_ws10-sol.pdf">solution</a></td>
+<td align="left">⏰ PS2 <span
+style="color: red;"><strong>due</strong></span></td>
+</tr>
+<tr class="odd">
+<td align="left">12</td>
+<td align="left">- Intro to congestion Control, cont’d</td>
+<td align="left">P&amp;D: 6.3</td>
+<td align="left">Part 1: <a href="./lec/Week11-part5.pptx">slides</a>,
+<a
+href="https://play.library.utoronto.ca/watch/9331f62f9ea4624e3f1ba0e3a8d6e00d">recording</a><br>Part
+2: <a href="./lec/Week11-part6.pptx">slides</a>, <a
+href="https://play.library.utoronto.ca/watch/d676f01eae710e237569de6e3badf1e8">recording</a><br>Part
+3: <a href="./lec/Week11-part7.pptx">slides</a>, <a
+href="https://play.library.utoronto.ca/watch/d1071f2071c5efa357961446b774a4ca">recording</a></td>
+<td align="left"><a
+href="./worksheet/CSC358_Winter25-TUT_ws11.pdf">Worksheet 11</a><br> -
+<a
+href="./worksheet/CSC358_Winter25-TUT_ws11-sol.pdf">solution</a><br><a
+href="./worksheet/CSC358_Winter25-TUT_ws12-SampleFinal.pdf">Worksheet
+11</a><br>(<em>sample final</em>)<br> - <a
+href="./worksheet/CSC358_Winter25-TUT_ws12-SampleFinal-sol.pdf">solution</a></td>
+<td align="left">⏰ PA3 <span
+style="color: red;"><strong>due</strong></span><br>⏰ WL3 <span
+style="color: red;"><strong>due</strong></span><br>📬 <span
+style="color: orange;"><strong>PS2 solution</strong></span>
+posted<br> 🔎 Available on Piazza<br>📬 <span
+style="color: orange;"><strong>Final exam cover page and aid
+sheets</strong></span> posted<br> 🔎 Available on Piazza</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

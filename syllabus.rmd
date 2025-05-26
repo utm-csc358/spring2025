@@ -1,0 +1,213 @@
+---
+title: "Syllabus"
+output: html_document
+---
+
+
+# Course Syllabus
+
+::: {#syltextbook .container .sec}
+## Textbooks
+
+  **(Strongly Recommended)** Computer Networks: A Systems Approach (6th edition), by Larry Peterson and Bruce Davie, referred to below as P&D.
+
+  This textbook is freely available at [systemsapproach](https://book.systemsapproach.org). Using the earlier editions is fine, though the chapter/section and the corresponding content may differ. While the class has a textbook, we will not follow its order of presentation; instead, we will use the textbook as a reference when covering each individual topic.
+:::
+
+::: {#syltentsch .container .sec}
+## Tentative Schedule
+
+  - **Module 0:** Introduction
+      - Course Overview; Sharing the Network (Circuits and Packets) (P&D, Section 1)
+  - **Module 1:** The Internet -- Architectural Principles and Design Contexts
+      - How does the Internet work? (An end-to-end view);
+      - The Internet: Architectural Principles and Goals (P&D, Section 1)
+  - **Module 2:** Physical Layer; Link Layer: Addressing and Broadcasting Frames
+      - Physical Layer: Encoding (P&D, Section 2)
+      - Link Layer: Ethernet and CSMA/CD; Error Detection/Correction (P&D, Section 2)
+      - "Frames" & Scalability Issues with Broadcast Ethernet
+      - Switched Ethernet & Spanning Tree Protocol (P&D, Section 3)
+  - **Module 3:** Network Layer: Addressing, Routing, and Forwarding Packets
+      - Why do we need a Network Layer? Fundamentals of Routing;
+      - Internet Addressing; The Internet Protocol (P&D, Section 3)
+      - DNS; DHCP; ARP; Routing Protocols (P&D, Section 3)
+      - Internet Topology and Routing; Path Vector (BGP); Switch Architecture (P&D, Section 4)
+  - **Module 4:** End-to-end: How the Internet works! The Web and HTTP
+      - Putting All Pieces Together; Host Network Stack; Socket Programming
+      - Application Layer: The Web and HTTP (P&D, Section 9)
+  - **Module 5:** Transport Layer: Reliable and Unreliable Connections
+      - Transport Protocol; Reliable Transport (P&D, Section 5)
+      - Congestion Control; Queueing Mechanisms; Middleboxes (P&D, Section 6)
+  - **Module 6:** (if time permits): Network Security, and Course Review
+      - Network Security (P&D, Section 8)
+      - Course Review
+:::
+
+::: {#sylassessment .container .sec}
+## Assessment and Deadlines
+
+  - **Programming Assignments (32%)**
+      - You will complete four programming assignments over the term.
+      - The first one (i.e., PA0) is worth 2%, and the other three are worth 10% each.
+      - These must be done individually.
+      - The programming assignments must be submitted on MarkUs, and the submission deadline will be at 11:59 PM.
+  - **Problem Sets (20%)**
+      - You will complete two problem sets, each worth 10%.
+      - These must be done individually.
+      - Problem sets must be submitted on Crowdmark, and the submission deadline will be at 11:59 PM.
+  - **Wireshark Labs (3%)**
+      - You will complete three Wireshark labs worth 1% each over the term.
+      - These must be done individually.
+      - Wireshark labs must be submitted on Quercus, and the submission deadline will be at 11:59 PM.
+  - **Midterm (15%)**
+      - The midterm is scheduled for Feb. 28, 6:25 - 8:00 PM, at KN 137, which will test the content of the weeks before the test.
+      - The length of the midterm test will be 95 minutes and closed book.
+      - Non-programmable calculators are allowed. Aid sheet is not allowed.
+  - **Final Exam (30%)**
+      - The final exam is closed book, comprehensive, 2 hours, and held during the exam period.
+      - Non-programmable calculators are allowed.
+      - Aid sheet is not allowed.
+      - You must obtain at least 40% on the final exam to pass the course; otherwise, your final course grade will be set no higher than 47%.
+
+See the course schedle for the tentative due dates. Note that **due dates may change** based on how the course is progressing.
+:::
+
+::: {#sylintegrity .container .sec}
+## Academic Integrity
+
+  Academic integrity is essential to the pursuit of learning and scholarship in a university, and to ensuring that a degree from the
+  University of Toronto Mississauga is a strong signal of each student's individual academic achievement. As a result, UTM treats
+  cases of cheating and plagiarism very seriously. The University of Toronto's [Code of Behaviour on Academic
+  Matters](https://governingcouncil.utoronto.ca/secretariat/policies/code-behaviour-academic-matters-july-1-2019) outlines behaviours that constitute academic dishonesty and the process for addressing academic offences. Potential offences include, but are not limited to:
+
+  - In papers and assignments:
+    - Using someone else's ideas or words without appropriate acknowledgement.
+    - Submitting your own work in more than one course, or more than once in the same course, without the permission of the instructor.
+    - Making up sources or facts.
+    - Obtaining or providing unauthorized assistance on any assignment.
+
+  - On tests and exams:
+    - Using or possessing unauthorized aids.
+    - Looking at someone else's answers during an exam or test.
+    - Misrepresenting your identity.
+
+  - In academic work:
+      - Falsifying institutional documents or grades.
+      - Falsifying or altering any documentation required, including (but not limited to) doctor's notes.
+
+  Keep in mind that the department uses software that compares programs for evidence of similar code. Below are some tips to help you avoid committing an academic offence, like plagiarism.
+
+  - Never look at another student's lab/assignment solution(s). Never show another student your lab/assignment solution. This applies to all drafts of a solution and to incomplete and even incorrect solutions.
+  - Keep discussions with other students focused on concepts and examples. Never discuss labs/assignments before the due date with anyone but your Instructors and your TAs. Do not discuss your solution publicly on the discussion board or publicly in the lab rooms/office hours.
+
+  All suspected cases of academic dishonesty will be investigated following procedures outlined in the Code of Behaviour on Academic Matters. If you have questions or concerns about what constitutes appropriate academic behaviour or appropriate research and citation methods, you are expected to seek out additional information on academic integrity from your instructor or from other [institutional resources](https://www.utm.utoronto.ca/academic-integrity/students).
+
+  Honesty and fairness are fundamental to the University of Toronto's mission. Plagiarism is a form of academic fraud and is treated very seriously. The work that you submit must be your own and cannot contain anyone else's work or ideas without proper attribution. You are expected to read the handout [How Not to Plagiarize](https://advice.writing.utoronto.ca/using-sources/how-not-to-plagiarize/) and be familiar with the [Code of Behaviour on Academic Matters](https://governingcouncil.utoronto.ca/secretariat/policies/code-behaviour-academic-matters-july-1-2019), linked from the UTM calendar under the link Codes and Policies.
+
+  All of the work you submit must be done by you, and your work must not be submitted by someone else. Plagiarism is academic fraud and is taken very seriously. The department uses software that compares programs for evidence of similar code. Please read the Rules and Regulations from the U of T Calendar (especially the Code of Behaviour on Academic Matters).
+
+  Students may use artificial intelligence tools, including generative AI, in this course as learning aids or to help produce assignments. (Dan wrote a book about programming with generative AI. He's serious about this: if GenAI helps you, please use it.) However, students are ultimately accountable for the work they submit. Any content produced by an artificial intelligence tool must be cited appropriately. Many organizations that publish standard citation formats are now providing information on citing generative AI (e.g., MLA: <https://style.mla.org/citing-generative-ai/>).
+
+  Furthermore, the tests and exams in this course will not allow the use of generative AI tools as aids, so you must be prepared to solve exercises, including writing significant code, without assistance. As a result, it is highly recommended that generative AI be used as a learning aid and that any material that is built on the output of generative AI tools be reviewed so that you are confident that it reflects what you understand and can produce on your own.
+
+  Please do not cheat. It is unpleasant for everyone involved, including us. Here are some general guidelines to help you avoid plagiarism:
+
+  - Never look at another student's assignment solution. Never show another student your assignment solution. This applies to all solution drafts and incomplete and even incorrect solutions.
+  - Keep discussions with other students focused on concepts and examples. Never discuss assignments before the due date with anyone but your Instructor and your Teaching Assistants.
+  - During the Midterm/Final Examination, once you enter the room, only communicate with the Invigilator(s), Instructor, and/or Teaching Assistant(s).
+  - Ensure that notes, electronics, and/or communication devices (e.g., cell phone, tablet, computer, etc.) are not on your physical person in the Midterm/Final Examination room.
+
+All submitted work is subject to verification with plagiarism detection tools.
+:::
+
+::: {#sylplagiarism .container .sec}
+## Plagiarism Detection
+
+Normally, students will be required to submit their course essays to the University's plagiarism detection tool for a review of textual similarity and detection of possible plagiarism. In doing so, students will allow their essays to be included as source documents in the tool's reference database, where they will be used solely for the purpose of detecting plagiarism. The terms that apply to the University's use of this tool are described on the [Centre for Teaching Support & Innovation](https://teaching.utoronto.ca/resources/plagiarism-detection/) web site.
+
+Students may wish to opt out of using the plagiarism detection tool. In order to opt out, contact your instructor by email no later than two (2) weeks after the start of classes. If you have opted out, then specific information on an alternative method to submit your assignment can be found below.
+:::
+
+::: {#sylconsent .container .sec}
+## Informed Consent -- Email Lists
+
+As a student enrolled in this course, you understand that you are providing your implicit consent to be included in an email list for the department to send you non-essential information from time to time. If you do not wish to be included in such an email list, please request to be removed by contacting one of the Academic Advisors & Undergraduate Program Administrators. Their information can be found on the MCS Website Contact Us [page](https://www.utm.utoronto.ca/math-cs-stats/contact-us-outreach).
+:::
+
+::: {#sylmissterm .container .sec}
+## Missed Term Work
+
+In general, if work is missed due to an emergency situation, then the weight of the work will be placed on other similar components in the course. For example, a missed term test would add to the weight of the final exam, and a missed assignment would add to the weight of a later assignment. Exact accommodation will be discussed between the student and the instructor, who must be informed within 72 hours of the due date.
+:::
+
+::: {#sylmissfin .container .sec}
+## Missed Final Exam
+
+Students who cannot complete their final examination due to illness or other serious causes must file an [online petition](https://www.utm.utoronto.ca/registrar/petitions) **within 72 hours** **of the missed examination**. Late petitions will **NOT** be considered. Upon approval of a deferred exam request, a nonrefundable fee is required for each examination approved. See the [Office of the Registrar Administrative Fees](https://www.utm.utoronto.ca/registrar/admin-fees) for Services page for more information.
+:::
+
+::: {#sylremark .container .sec}
+## Remark Requests
+
+Remark requests for Programming Assignments, Problem Sets, Wireshark Labs, and Midterm are due within 1 week of receiving the graded work and must be submitted by posting a private note on Piazza.
+
+  - We ask that you carefully review your assignments, reflect, and write a short explanation justifying the reasons for a regrading request.
+  - If a grade is contested and we realize that the marker made a mistake in the student's favour, the mark for that assignment may be lowered when the mistake is found. This would otherwise create a situation which is unfair to other students.
+  - Please include your full name and UTORid in the body of the private note.
+:::
+
+::: {#sylaccommodations .container .sec}
+## Accommodations
+
+  If you require any accommodations for a disability or other reasons, please contact the instructor as soon as possible to make the necessary arrangements.
+:::
+
+::: {#sylspecconsider .container .sec}
+## Special Consideration
+
+Please contact us immediately if you cannot complete coursework or miss a test due to a major illness or other circumstances outside your control. Special consideration will be evaluated on a case-by-case basis and is not given automatically. We may be unable to grant you exactly the special consideration you seek, so please ensure we have time to discuss your situation.
+
+In order to receive special consideration, you must fill out a Request for Special Consideration Form. Submit the form in PDF format as soon as possible, together with any supporting documentation, to the course instructor's email address.
+
+You can contact us (by email using the course instructor's email address) even before you have your documentation ready to submit; we won't be able to tell you at that point what accommodation you may receive, but we can answer other questions and offer advice. It is always easier to resolve situations earlier rather than later. If you face a particularly disruptive situation that is likely to impact more than one course, please contact your College Registrar. They are best equipped to provide you with general advice and support that goes beyond a single course.
+:::
+
+::: {#syllateness .container .sec}
+## Last Date to Drop Course
+
+Last date to drop course from Academic Record and GPA is March 10, 2025.
+:::
+
+::: {#syledi .container .sec}
+## Equity, Diversity and Inclusion
+The University of Toronto is committed to equity, human rights and respect for diversity. All members of the learning environment in this course should strive to create an atmosphere of mutual respect where all members of our community can express themselves, engage with each other, and respect one another's differences. U of T does not condone discrimination or harassment against any persons or communities.
+:::
+
+
+::: {#syltut .container .sec}
+## Tutorials
+Tutorials consist of reviews and exercises that will prepare you for the tests as well as the assignments. They are a crucial learning component of this course and are as important to attend as the lectures!
+:::
+
+::: {#sylannounce .container .sec}
+## Course Announcements
+You are responsible for reading all postings made by the instructor or the TAs on the course webpage, Quercus, and Piazza, and for being familiar with the entire content of this Syllabus; please take a few minutes at the beginning of the term to read through the entire Syllabus.
+:::
+
+::: {#syldisc .container .sec}
+## Discussion Board
+  - For all questions of general interest (whose answers are likely to be useful to other students, e.g., about the course material, problem sets, programming assignments, Wireshark labs, general questions about course logistics and administration), where you can ask the question while respecting the academic integrity of the course (without revealing any idea or part of a solution to a course assessment), please start a new topic directly on the Piazza discussion forum, so that everyone can benefit from reading your questions and the associated answers. We will monitor the forum regularly, but feel free to answer questions from other students, too! Helping someone else learn is one of the most effective ways to master a subject.
+
+  - For personal questions (making appointments, remarking requests, extensions, missing class, etc.), please email the course instructor directly from your University of Toronto email address. Please include "CSC358" in the subject line and your full name and UTORid in the body of the email. Otherwise, your message might be marked as spam! We aim to respond to all email and forum postings by the end of the next business day (not counting weekends and holidays). However, it may take longer, especially near due dates. If you do not hear back after four days, please do not hesitate to send a follow-up email or come in person during office hours.
+:::
+
+::: {#sylcommunication .container .sec}
+## Communications 
+It is the student's responsibility to:
+  - Maintain current contact information with the University, including address, phone numbers, and emergency contact information.
+  - Use the university-provided e-mail address or maintain a valid forwarding e-mail address.
+  - Regularly check the official University communications channels. Official University communications are considered received if sent by postal mail, fax, or e-mail to the student's designated primary e-mail account via their @utoronto.ca alias.
+  - Accept that forwarded e-mails may be lost and that e-mail is considered received if sent via the student's @utoronto.ca alias.
+  - Check the UofT/Quercus email and course websites on a regular basis during the term. Further, check the discussion board daily for any course updates/announcements.
+  - Read and keep current with the discussions on the discussion board.
+:::

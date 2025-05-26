@@ -1,0 +1,5 @@
+zoom_lec_l <- "https://utoronto.zoom.us/j/85487534694"
+zoom_sah_l <- "https://utoronto.zoom.us/j/84009679925"
+quercus_l <- "https://q.utoronto.ca/courses/373623/quizzes"
+markus_l <- "https://markus0.teach.cs.toronto.edu/utm-2025-01/?locale=en"
+crowdmark_l <- "https://crowdmark.com"

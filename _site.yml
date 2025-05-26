@@ -1,0 +1,60 @@
+name: "CSC358-UTM-W-25"
+navbar:
+  title: "CSC358"
+  left:
+    - text: "Schedule"
+      href: index.html#schedule
+    - text: "Coursework"
+      href: index.html#coursework
+    - text: "Syllabus"
+      href: syllabus.html
+      menu:
+      - text: "Overview"
+        href: syllabus.html
+      - text: "Textbooks"
+        href: syllabus.html#syltextbook
+      - text: "Tentative Schedule"
+        href: syllabus.html#syltentsch
+      - text: "Assessment and Deadlines"
+        href: syllabus.html#sylassessment
+      - text: "Academic Integrity"
+        href: syllabus.html#sylintegrity
+      - text: "Plagiarism Detection"
+        href: syllabus.html#sylplagiarism
+      - text: "Informed Consent – Email Lists"
+        href: syllabus.html#sylconsent
+      - text: "Missed Term Work"
+        href: syllabus.html#sylmissterm
+      - text: "Missed Final Exam"
+        href: syllabus.html#sylmissfin
+      - text: "Remark Requests"
+        href: syllabus.html#sylremark
+      - text: "Accommodations"
+        href: syllabus.html#sylaccommodations
+      - text: "Special Consideration"
+        href: syllabus.html#sylspecconsider
+      - text: "Last Date to Drop Course"
+        href: syllabus.html#syllateness
+      - text: "Equity, Diversity and Inclusion"
+        href: syllabus.html#syledi
+      - text: "Tutorials"
+        href: syllabus.html#syltut
+      - text: "Course Announcements"
+        href: syllabus.html#sylannounce
+      - text: "Discussion Board"
+        href: syllabus.html#syldisc
+      - text: "Communications"
+        href: syllabus.html#sylcommunication
+    - text: MarkUs
+      href: https://markus0.teach.cs.toronto.edu/utm-2025-01/?locale=en
+    - text: Crowdmark
+      href: https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjY5PH1qo-MAxXKg4kEHfO2HTkQjBB6BAgPEAE&url=https%3A%2F%2Fapp.crowdmark.com%2Fsign-in&usg=AOvVaw1BliOUNBlYLMDitDswcatf&opi=89978449
+    - text: Quercus
+      href: https://q.utoronto.ca/courses/373623
+
+output_dir: "docs"
+output: 
+  html_document:
+    css: css/style.css
+    
+    
