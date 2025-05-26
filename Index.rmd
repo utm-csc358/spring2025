@@ -42,11 +42,20 @@ and live-streamed.
 ![Ali Parchekani<br>TA](./images/empty.png)
 :::
 ::: instructorphoto
-![Hossein Bijanrostami<br>TA](./images/empty.png)
+![Hossein Bijanrostami<br>TA](./images/Hossein_photo.jpg)
 :::
+
 ::: instructorphoto
 ![Mai Ali<br>TA](./images/Mai_Ali_photo.jpg)
 :::
+
+
+:::
+:::
+
+
+::: {#people .container .sec}
+::: {#shuffle-container .col}
 
 ::: instructorphoto
 ![Sahil Gupta<br>TA](./images/empty.png)
