@@ -61,7 +61,7 @@ and live-streamed.
 :::
 
 ::: instructorphoto
-![Muhammad Hamza<br>TA](./images/empty.png)
+![Muhammad Hamza<br>TA](./images/Muhammad.png)
 :::
 
 :::
