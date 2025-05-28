@@ -72,6 +72,16 @@ output: html_document
 See the course schedle for the tentative due dates. Note that **due dates may change** based on how the course is progressing.
 :::
 
+::: {#latedays .container .sec}
+## Late Days
+- You have 6 grace tokens to use throughout the semester. The 6 grace days
+can be distributed across all assignments.
+- A grace token extends the deadline by 24 hours.
+- You can use up to 3 late days per assignment.
+- Assignments submitted after the grace period will receive a grade of zero.
+:::
+
+
 ::: {#sylintegrity .container .sec}
 ## Academic Integrity
 

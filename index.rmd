@@ -1,8 +1,7 @@
 ---
-title: "CSC38-Winter 2025"
+title: "CSC358-Winter 2025"
 output: html_document
 ---
-
 
 ```{r setup, include=FALSE}
 source("./_aux/links_supplementary.R")
@@ -21,7 +20,18 @@ source("./_aux/week12.R")
 ```
 
 
-# **CSC358: Principles of Computer Networks - Winter 2025**<br>Mathematical & Computational Sciences, University of Toronto Mississauga
+::: {#header}
+::: {#header-text .sec}
+**`r course_code`: `r course_full_name`**<br>
+<span class="header-subtitle">`r university` -- `r season` `r year`<br>`r department`</span>
+:::
+
+::: {#header-image .img}
+![](./images/favicon.png)
+::: 
+:::
+
+
 
 This course is designed as an *in-person* course aimed at introducing basic 
 computer networks design concepts and protocols. For your convenience, all 
@@ -32,8 +42,7 @@ and live-streamed.
 
 ## Course Staff
 
-::: {#people .container .sec}
-::: {#shuffle-container .col}
+::: {#shuffleleft-container .col .sec}
 
 ::: instructorphoto
 ![Erfan Meskar<br>Instructor](./images/erfan_img3.png)
@@ -49,13 +58,6 @@ and live-streamed.
 ![Mai Ali<br>TA](./images/Mai_Ali_photo.jpg)
 :::
 
-:::
-:::
-
-
-::: {#people .container .sec}
-::: {#shuffle-container .col}
-
 ::: instructorphoto
 ![Sahil Gupta<br>TA](./images/empty.png)
 :::
@@ -65,11 +67,11 @@ and live-streamed.
 :::
 
 :::
-:::
+
 
 
 ::: sechighlight
-::: {#logistics .container .sec}
+::: {#logistics .sec}
 ## Logistics
 - **Instructor:** Erfan Meskar ![Muhammad Hamza<br>TA](./images/erfan_email.jpg)
 - **Lectures:** you can attend the lectures both in-person and 
@@ -96,7 +98,7 @@ over [Zoom](`r zoom_lec_l`).
 :::
 
 
-::: {#coursework .container .sec}
+::: {#coursework .sec}
 ## Coursework
   - **Programming Assignments (32%)**
     - You will complete four programming assignments over the term.
@@ -132,7 +134,7 @@ All (currently tentative) deadlines are listed in the [schedule](#schedule).
 Note that **due dates may change** based on how the course is progressing.
 :::
 
-::: {#submitting .container .sec}
+::: {#submitting .sec}
 ##  Submitting Coursework
 - Do not submit your coursework via email.
 - If anything goes wrong, please ask a question in Piazza or contact a course 
@@ -142,7 +144,7 @@ grade the last submission.
 - Partial work is better than not submitting any work.
 :::
 
-::: {#latedays .container .sec}
+::: {#latedays .sec}
 ## Late Days
 - You have 6 grace tokens to use throughout the semester. The 6 grace days
 can be distributed across all assignments.
@@ -151,12 +153,12 @@ can be distributed across all assignments.
 - Assignments submitted after the grace period will receive a grade of zero.
 :::
 
-::: {#sylremark .container .sec}
+::: {#sylremark .sec}
 ## Regrade Requests
 
 Regrade requests for Programming Assignments, Problem Sets, Wireshark Labs, 
 and Midterm are due within 1 week of receiving the graded work and must be 
-submitted by posting a private note on Piazza.
+submitted by posting a private question on Piazza.
 
   - We ask that you carefully review your assignments, reflect, and write a 
   short explanation justifying the reasons for a regrading request.
@@ -172,7 +174,7 @@ submitted by posting a private note on Piazza.
 ## Course Schedule
 
 |Week | Topics           | Readings    | Slides and<br>Recordings  | Worksheets | Coursework
-|:----|:-----------------|:------------|:---------------|:-----------|:------------------------
+|:----|:-----------------|:------------|:---------------|:-----------|:----------------------------------
 |1    | `r W01_top`      | `r W01_rea` | `r W01_sli`| `r W01_wsh`| `r W01_crw`               
 |2    | `r W02_top`      | `r W02_rea` | `r W02_sli`| `r W02_wsh`| `r W02_crw`              
 |3    | `r W03_top`      | `r W03_rea` | `r W03_sli`| `r W03_wsh`| `r W03_crw`              

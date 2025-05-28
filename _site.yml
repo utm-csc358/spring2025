@@ -51,12 +51,9 @@ navbar:
       href: https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjY5PH1qo-MAxXKg4kEHfO2HTkQjBB6BAgPEAE&url=https%3A%2F%2Fapp.crowdmark.com%2Fsign-in&usg=AOvVaw1BliOUNBlYLMDitDswcatf&opi=89978449
     - text: Quercus
       href: https://q.utoronto.ca/courses/373623
-
 output_dir: "docs"
 output: 
   html_document:
     css: css/style.css
     includes:
       in_header: favicon.html
-    
-    

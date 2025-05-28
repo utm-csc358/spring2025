@@ -1,3 +1,10 @@
+course_code <- "CSC358"
+course_full_name <- "Principles of Computer Networks"
+university <- "University of Toronto Mississauga"
+department <- "Mathematical & Computational Sciences"
+season <- "Winter"
+year <- "2025"
+
 zoom_lec_l <- "https://utoronto.zoom.us/j/85487534694"
 zoom_sah_l <- "https://utoronto.zoom.us/j/84009679925"
 quercus_l <- "https://q.utoronto.ca/courses/373623/quizzes"

@@ -11,8 +11,33 @@ p {
 }
 
 #header {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1px;
+  margin-bottom: 0px;
+  font-size: 26px;
+  padding: 1px 2px;
+}
+
+#header-text {
+  flex: 1;
+  font-size: 36px;
+  line-height: 1;
+}
+
+.header-subtitle {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+#header-image {
+  flex-shrink: 0;
+}
+
+#header-image img {
+  height: 150px;
+  width: auto;
 }
 
 h1 {
@@ -49,6 +74,13 @@ h3 {
   display: flex;
   flex-wrap: wrap; /* allows wrapping on smaller screens */
   justify-content: center;
+  gap: 1.5em; /* space between photos */
+}
+
+#shuffleleft-container {
+  display: flex;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+  justify-content: left;
   gap: 1.5em; /* space between photos */
 }
 
