@@ -1,5 +1,5 @@
 ---
-title: "CSC358-Winter 2025"
+title: "CSC358 - Winter 2025"
 output: html_document
 ---
 
@@ -21,10 +21,8 @@ source("./_aux/week12.R")
 
 
 ::: {#header}
-::: {#header-text .sec}
-**`r course_code`: `r course_full_name`**<br>
-<span class="header-subtitle">`r university` -- `r season` `r year`<br>`r department`</span>
-:::
+<span class="header-title">`r course_code`: `r course_full_name`<br></span>
+<span class="header-subtitle">`r university`<br>`r department`<br>`r season` `r year`</span>
 
 ::: {#header-image .img}
 ![](./images/favicon.png)
@@ -59,7 +57,7 @@ and live-streamed.
 :::
 
 ::: instructorphoto
-![Sahil Gupta<br>TA](./images/empty.png)
+![Sahil Gupta<br>TA](./images/sahil.jpeg)
 :::
 
 ::: instructorphoto
