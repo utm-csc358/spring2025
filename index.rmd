@@ -71,7 +71,7 @@ and live-streamed.
 ::: sechighlight
 ::: {#logistics .sec}
 ## Logistics
-- **Instructor:** Erfan Meskar ![Muhammad Hamza<br>TA](./images/erfan_email.jpg)
+- **Instructor:** Erfan Meskar ![Erfan's Email](./images/erfan_email.jpg)
 - **Lectures:** you can attend the lectures both in-person and 
 over [Zoom](`r zoom_lec_l`).
   - **LEC0101:** Thursday, 01:00 PM - 03:00 PM, MN 2110.
